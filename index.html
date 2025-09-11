@@ -74,7 +74,7 @@
     /* Gallery grid */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 20px;
       max-width: 1000px;
@@ -90,9 +90,11 @@
     }
     .photo-card img {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
+      height: auto; /* biar ga kepotong */
+      max-height: 400px; /* opsional */
+      object-fit: contain; /* jaga proporsi */
       display: block;
+      background: #fce4ec; /* kasih background biar rapi kalo ada space */
     }
     .photo-card p {
       margin: 10px;
